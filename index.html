@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputer Store</title>
+</head>
+<body>
+    
+    <h1>Komputer Store</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Joe Banker</h2>
+            <p>Balance:</p><p id="currentBalance">0,00 kr.</p>
+            
+            <button onclick="getLoan()">Get a loan</button>
+
+        <div id="outstandingLoan" >
+            <p>Outstanding loan:</p><p id="outLoan">0,00 kr.</p>
+        </div>
+
+        </div>
+        <div class="grid-item">
+            <h2>Work</h2>
+            <p>Pay:</p><p id="payBalance">0,00 kr.</p>
+            <button onclick="sendToBank()">Bank</button>
+            <button onclick="doWork()">Work</button>
+            <button onclick="repayLoan()" id="paybackButton">Repay loan</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+
+        <div class="grid-item">
+            <h2>Laptops</h2>
+
+                <select onclick="pickLaptop()" id="laptopOptions" name="cars">
+                </select>
+ 
+            <h4>Features:</h4>
+            <p id="features"></p>
+        </div>  
+        <div class="grid-item"><h3 id="laptopTitle"></h3>
+
+            <div id="laptopImage">
+
+             </div>
+
+            <p id="description"></p>
+            <p id = "laptopPrice">0,00 kr.</p>
+            <button>Buy now</button>
+
+        </div>
+    </div>
+
+<script src="bank.js"></script>
+<script src="worker.js"></script>
+<script src="laptop.js"></script>
+      
+</body>
+</html>
