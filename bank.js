@@ -1,50 +1,49 @@
-let balance = 0;
+let balance = 0
 
-let loanNumber = 0;
+let loanNumber = 0
 
-let hasLoan = false;
+let hasLoan = false
 
-let outLoanText = document.getElementById("outstandingLoan");
+let outLoanText = document.getElementById("outstandingLoan")
 
 
-function updateBalance (){
-    let formattedBalance = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(balance);
-    document.getElementById("currentBalance").innerHTML = formattedBalance;
+updateBalance = () => {
+    let formattedBalance = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(balance)
+    document.getElementById("currentBalance").innerHTML = formattedBalance
 }
 
-function updateLoan (){
-    let formattedLoan = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(loanNumber);
-    document.getElementById("outLoan").innerHTML = formattedLoan;
+updateLoan = () => {
+    let formattedLoan = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(loanNumber)
+    document.getElementById("outLoan").innerHTML = formattedLoan
 }
 
 
+getLoan = () => {
 
-function getLoan(){
+    let loan = prompt("How much would you like to loan?", "enter amount")
 
-    let loan = prompt("How much would you like to loan?", "enter amount"); 
-    
-    loanAttempt = Number(loan);
+    loanAttempt = Number(loan)
 
 //if(moneyNumber == 0){
 
 if(!hasLoan){
     if(loanAttempt <= (balance*2) && loanAttempt > 0){
 
-    document.getElementById("outLoan").innerHTML = loanNumber;
-    loanNumber = loanAttempt;
-    balance += loanAttempt;
-    hasLoan = true;
+    document.getElementById("outLoan").innerHTML = loanNumber
+    loanNumber = loanAttempt
+    balance += loanAttempt
+    hasLoan = true
 
-    var x = document.getElementById("outstandingLoan");
-    outLoanText.style.display = "block";
-    paybackBtn.style.display = "block";
+    var x = document.getElementById("outstandingLoan")
+    outLoanText.style.display = "block"
+    paybackBtn.style.display = "block"
     
-    updateLoan();
-    updateBalance();
+    updateLoan()
+    updateBalance()
 
     }
     else{
-       alert("please enter a valid amount (higher than 0 and lower than or equal to double your balance)");
+       alert("please enter a valid amount (higher than 0 and lower than or equal to double your balance)")
     }
 }
     else{

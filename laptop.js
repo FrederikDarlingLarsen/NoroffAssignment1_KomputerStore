@@ -17,7 +17,7 @@
 
     })())
 
- function pickLaptop() {
+ pickLaptop = () => {
 
     let index = document.getElementById("laptopOptions").selectedIndex-1 //thros erreoe?
 
@@ -44,7 +44,7 @@
     document.getElementById("laptopTitle").innerHTML 
      = (`${data[index].title}`)
     
-    let formattedPrice = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(data[index].price);
+    let formattedPrice = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(data[index].price)
     
     document.getElementById("laptopPrice").innerHTML 
     = formattedPrice;
@@ -56,10 +56,11 @@
 
 
 
- function buyLaptop(price) {
+buyLaptop = (price) => {
 
     if(price <= balance){
-        //buy it
+        balance -= price
+        updateBalance()
     }else{
         alert("You do not have enough money to buy that!")
     }
