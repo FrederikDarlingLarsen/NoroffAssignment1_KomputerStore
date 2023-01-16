@@ -4,7 +4,7 @@ let paybackBtn = document.getElementById("paybackButton")
 
 updatePayBalance = () => {
     let formattedPayBalance = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(payBalance)
-    document.getElementById("payBalance").innerHTML = formattedPayBalance
+    document.getElementById("payBalance").textContent = formattedPayBalance
 }
 
 doWork = () => {

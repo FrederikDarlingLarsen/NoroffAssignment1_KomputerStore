@@ -14,14 +14,14 @@ let outLoanText = document.getElementById("outstandingLoan")
 updateBalance = () => {
     // Formats the number into currency in DKK.
     let formattedBalance = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(balance)
-    document.getElementById("currentBalance").innerHTML = formattedBalance
+    document.getElementById("currentBalance").textContent = formattedBalance
 }
 
 // Function for updating the HTML of the loan.
 updateLoan = () => {
     // Formats the number into currency in DKK.
     let formattedLoan = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(loanNumber)
-    document.getElementById("outLoan").innerHTML = formattedLoan
+    document.getElementById("outLoan").textContent = formattedLoan
 }
 
 // Function for getting af loan.
@@ -42,7 +42,7 @@ if(!hasLoan){
     // sets the attempted loan to the actual loan
     loanNumber = loanAttempt
     // Gets the element with the loan amount and sets it to the amount loaned.
-    document.getElementById("outLoan").innerHTML = loanNumber
+    document.getElementById("outLoan").textContent = loanNumber
     
     // Adds theloaned amount to the balance and set hasLoan to true.
     balance += loanAttempt
