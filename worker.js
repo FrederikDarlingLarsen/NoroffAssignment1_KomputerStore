@@ -1,16 +1,7 @@
-import {
-  updateBalance,
-  updateLoan,
-  updatePayBalance,
-} from "./updateFunctions.js";
-
-import vars from "./variables.js";
-
-
 // Function for doing work adds 100 to the pay balance and the updates the HTML.
 const doWork = () => {
-  vars.payBalance += 100;
-  updatePayBalance(vars.payBalance);
+  payBalance += 100;
+  updatePayBalance(payBalance);
 };
 
 // Function for sending earnings to the bank.
@@ -90,4 +81,4 @@ const repayLoan = () => {
   updatePayBalance();
 };
 
-export { doWork, sendToBank, repayLoan };
+

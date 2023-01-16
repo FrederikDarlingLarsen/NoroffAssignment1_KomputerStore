@@ -1,6 +1,3 @@
-import { updateBalance, updateLoan } from "./updateFunctions.js";
-import vars from "./variables.js";
-
 // Function for getting af loan.
 const getLoan = () => {
   // Prompt asking to user how much they want to loan.
@@ -41,4 +38,4 @@ const getLoan = () => {
   }
 };
 
-export default getLoan;
+

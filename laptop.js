@@ -1,7 +1,3 @@
-import { updateBalance } from "./updateFunctions.js";
-import vars from "./variables.js";
-
-
 
 // Function for picking a laptop.
 const pickLaptop = () => {
@@ -83,4 +79,4 @@ const buyLaptop = () => {
   }
 };
 
-export { pickLaptop, buyLaptop };
+
