@@ -1,20 +1,18 @@
-
+    //Using the Fetch API to get the data about the laptops
     fetch('https://hickory-quilled-actress.glitch.me/computers')
     .then((response) => response.json())
     .then((data) => (function () {
-
+    
+        //Gets the element for the laptop options
         let optionsElement = document.getElementById("laptopOptions")
 
-        optionsElement.innerHTML = 
+        let pullOptions = `<option >Pick a laptop</option>`;
         
-       `<option >Pick a laptop</option>
-       <option value="0">${data[0].title}</option>
-        <option value="1">${data[1].title}</option>
-        <option value="2">${data[2].title}</option>
-        <option value="3">${data[3].title}</option>
-        <option value="4">${data[4].title}</option>
-        <option value="5">${data[5].title}</option>`
-
+        data.forEach(element => {
+            pullOptions += `<option>${element.title}</option>`;
+        });
+        // Adds the titles of the laptops to the 
+        optionsElement.innerHTML = pullOptions;
     })())
 
  pickLaptop = () => {
@@ -25,18 +23,14 @@
     .then((response) => response.json())
     .then((data) => (function () {
     
+    let featuresList="";
+
+        data[index].specs.forEach(element => {
+            featuresList += `<li>${element}</li>`
+        });
+
     document.getElementById("features").innerHTML 
-    = (`<ul>
-    
-    <li>${data[index].specs[0]}</li>
-    <li>${data[index].specs[0]}</li>
-    <li>${data[index].specs[1]}</li>
-    <li>${data[index].specs[2]}</li>
-    <li>${data[index].specs[3]}</li>
-    <li>${data[index].specs[4]}</li>
-    <li>${data[index].specs[5]}</li>
-    
-    <ul/>`)
+    = (`<ul>${featuresList}<ul/>`)
     
     document.getElementById("description").innerHTML 
     = (`${data[index].description}`)
@@ -54,8 +48,6 @@
     })())
  }
 
-
-
 buyLaptop = () => {
 
     let priceString = document.getElementById("laptopPrice").textContent
@@ -71,5 +63,4 @@ buyLaptop = () => {
     }else{
         alert("You do not have enough money to buy that!")
     }
-
  }
