@@ -14,6 +14,7 @@ let outLoanText = document.getElementById("outstandingLoan")
 updateBalance = () => {
     // Formats the number into currency in DKK.
     let formattedBalance = new Intl.NumberFormat('da-DK', { style: 'currency', currency: 'DKK' }).format(balance)
+    //ads....
     document.getElementById("currentBalance").textContent = formattedBalance
 }
 
