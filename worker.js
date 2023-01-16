@@ -43,10 +43,8 @@ else{
        loanNumber = 0
     }
     else{
-
     // If false, the money going towards the loan is subtracted from the loan.
     loanNumber -= toLoan
-
     }
 
     // The mony going towards the bank account is added to the balance.
@@ -60,8 +58,8 @@ else{
     payBalance = 0
     updatePayBalance()
 
-   // If the loan is equal to 0, the hasLoan boolean is set to false and the elements pertaining to the loan are hidden.
-   if(loanNumber === 0){
+    // If the loan is equal to 0, the hasLoan boolean is set to false and the elements pertaining to the loan are hidden.
+    if(loanNumber === 0){
     hasLoan = false
     outLoanText.style.display = "none"
     paybackBtn.style.display = "none"

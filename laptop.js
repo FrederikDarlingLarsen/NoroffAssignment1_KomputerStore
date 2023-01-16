@@ -70,9 +70,7 @@ buyLaptop = () => {               //you can buy empty for 0 FIX IT!!!
     // Gets the price of the laptop as a string from the HTML, and parses it to a number.
     let priceString = document.getElementById("laptopPrice").textContent.replace(".","")
     let price = parseFloat(priceString)
-
-    console.log("price: " + price)
-
+    
     // Gets the title of the laptop.
     let laptopTitle = document.getElementById("laptopTitle").textContent
 

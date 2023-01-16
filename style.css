@@ -1,7 +1,7 @@
 .grid-container {
     display: flex;
     flex-direction: row;
-    background-color: gray;
+    background-color: lightblue;
     padding: 10px;
     justify-content: center;
 
@@ -19,6 +19,10 @@
    
   }
 
+  p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
   .grid-item-large {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -29,7 +33,7 @@
   }
 
   h1{
-    background-color: grey;
+    background-color: black;
     color: white;
     font-family: sans-serif;
   }
@@ -42,6 +46,11 @@
   h3{
     
     font-family: sans-serif;
+  }
+
+  h4{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   body{
@@ -61,7 +70,7 @@
 
 
   button{
-    background-color: white;
+    background-color: lightgreen;
     border-radius: 8px;
     font-size: 18px;
     padding: 12px;
