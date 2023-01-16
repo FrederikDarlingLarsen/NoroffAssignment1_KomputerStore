@@ -85,7 +85,7 @@ balance += theRest
 // The elements pertaining to the loan are hidden.
 outLoanText.style.display = "none"
 paybackBtn.style.display = "none"
-loanNumber = 0 //NECESSARY?????
+loanNumber = 0 
 
 // Balance is updated.
 updateBalance()

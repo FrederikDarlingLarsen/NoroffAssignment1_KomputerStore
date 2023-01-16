@@ -65,15 +65,20 @@
  }
 
 // Function for buying a laptop.
-buyLaptop = () => {               //you can buy empty for 0 FIX IT!!!
+buyLaptop = () => {               
 
     // Gets the price of the laptop as a string from the HTML, and parses it to a number.
     let priceString = document.getElementById("laptopPrice").textContent.replace(".","")
     let price = parseFloat(priceString)
-    
+
     // Gets the title of the laptop.
     let laptopTitle = document.getElementById("laptopTitle").textContent
 
+    console.log(laptopTitle)
+
+    if(laptopTitle != ""){
+
+    
     // Checks if the price of the laptop is less than or equal to the balance in the bank.
     if(price <= balance){
         // if true, the price is subtracted from balance, balance is updated and an alert is given to the user.
@@ -84,4 +89,9 @@ buyLaptop = () => {               //you can buy empty for 0 FIX IT!!!
         // if false an alert is given to the user.
         alert("You do not have enough money to buy that!")
     }
+} 
+
+else{
+    alert("Please select a laptop")
+}
  }
