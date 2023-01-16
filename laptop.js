@@ -56,11 +56,18 @@
 
 
 
-buyLaptop = (price) => {
+buyLaptop = () => {
+
+    let priceString = document.getElementById("laptopPrice").textContent
+
+    let laptopTitle = document.getElementById("laptopTitle").textContent
+
+    let price = parseFloat(priceString)
 
     if(price <= balance){
         balance -= price
         updateBalance()
+        alert(`Congratulations you just bought: ${laptopTitle}`)
     }else{
         alert("You do not have enough money to buy that!")
     }
