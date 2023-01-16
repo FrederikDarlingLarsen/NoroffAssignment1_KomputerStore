@@ -1,83 +1,77 @@
 .grid-container {
-    display: flex;
-    flex-direction: row;
-    background-color: lightblue;
-    padding: 10px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 10px;
+  justify-content: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10%;
+  width: 20%;
+}
 
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
-  }
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    margin: 10px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 10%;
-    width: 20%;
+.grid-item-large {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20%;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10%;
+}
 
-   
-  }
+h1 {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
 
-  p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+h2 {
+  font-family: sans-serif;
+}
 
-  .grid-item-large {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20%;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 10%;
-  }
+h3 {
+  font-family: sans-serif;
+}
 
-  h1{
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-  }
+h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
-  h2{
-    
-    font-family: sans-serif;
-  }
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
-  h3{
-    
-    font-family: sans-serif;
-  }
+#outstandingLoan {
+  display: none;
+}
 
-  h4{
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+#paybackButton {
+  display: none;
+}
 
-  body{
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+button {
+  background-color: lightgreen;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 12px;
+  margin: 20px;
+}
 
-
-  #outstandingLoan{
-    display: none;
-  }
-
-
-  #paybackButton{
-    display: none;
-  }
-
-
-  button{
-    background-color: lightgreen;
-    border-radius: 8px;
-    font-size: 18px;
-    padding: 12px;
-    margin: 20px;
-  }
-
-button:hover {background-color: lightgray}
+button:hover {
+  background-color: lightgray;
+}
 
 button:active {
   background-color: gray;
