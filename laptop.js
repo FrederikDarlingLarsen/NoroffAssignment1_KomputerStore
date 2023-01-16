@@ -4,6 +4,7 @@ const pickLaptop = () => {
   // Gets the index for the laptop that is picked.
   let index = document.getElementById("laptopOptions").selectedIndex - 1; //thros erreoe?
 
+  if(index >=0){
   // Using the Fetch API to get the data about the laptops.
   fetch("https://hickory-quilled-actress.glitch.me/computers")
     .then((response) => response.json())
@@ -48,6 +49,7 @@ const pickLaptop = () => {
       width="200" height="150" alt="${data[index].title}">`;
       })()
     );
+  }
 };
 
 // Function for buying a laptop.
