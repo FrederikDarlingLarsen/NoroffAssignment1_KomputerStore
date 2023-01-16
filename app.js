@@ -17,9 +17,6 @@
     // Gets the "repay loan" button for the HTML.
     let paybackBtn = document.getElementById("paybackButton")
 
-
-
-    
 fetch("https://hickory-quilled-actress.glitch.me/computers")
   .then((response) => response.json())
   .then((data) =>
@@ -40,11 +37,13 @@ fetch("https://hickory-quilled-actress.glitch.me/computers")
     })()
   );
 
-document.getElementById("loanButton").addEventListener("click", function(){getLoan()});
 
+
+
+// Loading all of the elements that uses onClick events and adds event listeners.
+document.getElementById("loanButton").addEventListener("click", function(){getLoan()});
 document.getElementById("buyButton").addEventListener("click", function(){buyLaptop(balance)});
 document.getElementById("laptopOptions").addEventListener("click", function(){pickLaptop()});
-
 document.getElementById("WorkButton").addEventListener("click", function(){doWork()});
 document.getElementById("bankButton").addEventListener("click", function(){sendToBank()});
 document.getElementById("paybackButton").addEventListener("click", function(){repayLoan()});
