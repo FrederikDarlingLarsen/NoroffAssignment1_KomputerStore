@@ -63,7 +63,7 @@ body {
 }
 
  #paybackButton {
-  display: block flex; 
+  display: none; 
 
 
 }  

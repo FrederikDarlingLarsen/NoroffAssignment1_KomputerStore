@@ -6,7 +6,7 @@ const updateBalance = () => {
   let formattedBalance = new Intl.NumberFormat("da-DK", {
     style: "currency",
     currency: "DKK",
-  }).format(balance);
+  }).format(globals.balance);
   document.getElementById("currentBalance").textContent = formattedBalance;
 };
 
@@ -16,7 +16,7 @@ const updateLoan = () => {
   let formattedLoan = new Intl.NumberFormat("da-DK", {
     style: "currency",
     currency: "DKK",
-  }).format(loanNumber);
+  }).format(globals.loanNumber);
   document.getElementById("outLoan").textContent = formattedLoan;
 };
 
@@ -25,7 +25,8 @@ const updatePayBalance = () => {
   let formattedPayBalance = new Intl.NumberFormat("da-DK", {
     style: "currency",
     currency: "DKK",
-  }).format(payBalance);
+  }).format(globals.payBalance);
   document.getElementById("payBalance").textContent = formattedPayBalance;
 };
 
+export {updateBalance, updatePayBalance, updateLoan}

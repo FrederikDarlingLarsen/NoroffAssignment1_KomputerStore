@@ -1,4 +1,5 @@
 import globals from "./globals.js";
+import {updateBalance} from "./UpdateFunctions.js";
 
 // Function for picking a laptop.
 const pickLaptop = () => {
@@ -68,10 +69,10 @@ const buyLaptop = () => {
 
   if (laptopTitle != "") {
     // Checks if the price of the laptop is less than or equal to the balance in the bank.
-    if (price <= balance) {
+    if (price <= globals.balance) {
       // if true, the price is subtracted from balance, balance is updated and an alert is given to the user.
-      balance -= price;
-      updateBalance(balance);
+      globals.balance -= price;
+      updateBalance(globals.balance);
       alert(`Congratulations you just bought: ${laptopTitle}`);
     } else {
       // if false an alert is given to the user.
@@ -82,4 +83,6 @@ const buyLaptop = () => {
   }
 };
 
+
+export {pickLaptop, buyLaptop};
 

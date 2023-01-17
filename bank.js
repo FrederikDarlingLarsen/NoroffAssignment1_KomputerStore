@@ -1,4 +1,5 @@
 import globals from "./globals.js";
+import {updateBalance, updateLoan} from "./UpdateFunctions.js";
 
 // Function for getting af loan.
 const getLoan = () => {
@@ -11,19 +12,19 @@ const getLoan = () => {
   // Checks if the user has a loan.
   if (!globals.hasLoan) {
     // Checks whether the entered amount is less than or equal to double the balance, and if it is above 0.
-    if (loanAttempt <= balance * 2 && loanAttempt > 0) {
+    if (loanAttempt <= globals.balance * 2 && loanAttempt > 0) {
       // sets the attempted loan to the actual loan
-      loanNumber = loanAttempt;
+      globals.loanNumber = loanAttempt;
       // Gets the element with the loan amount and sets it to the amount loaned.
-      document.getElementById("outLoan").textContent = loanNumber;
+      document.getElementById("outLoan").textContent = globals.loanNumber;
 
       // Adds theloaned amount to the balance and set globals.hasLoan to true.
       globals.balance += loanAttempt;
       globals.hasLoan = true;
 
       // Set the text and button for the loan to be displayed.
-      outLoanText.style.display = "block";
-      paybackBtn.setAttribute(
+      globals.outLoanText.style.display = "block";
+      globals.paybackBtn.setAttribute(
         "style", "display: block flex;");
 
       // Updating the loan and balance HTML.
@@ -40,5 +41,8 @@ const getLoan = () => {
     alert("You already have a loan!");
   }
 };
+
+
+export default getLoan;
 
 

@@ -1,4 +1,6 @@
-
+import {doWork, sendToBank, repayLoan} from "./worker.js";
+import {pickLaptop, buyLaptop} from "./laptop.js";
+import getLoan from "./bank.js";
 
 fetch("https://hickory-quilled-actress.glitch.me/computers")
   .then((response) => response.json())
@@ -22,7 +24,7 @@ fetch("https://hickory-quilled-actress.glitch.me/computers")
 
 // Loading all of the elements that uses onClick events and adds event listeners.
 document.getElementById("loanButton").addEventListener("click", function(){getLoan()});
-document.getElementById("buyButton").addEventListener("click", function(){buyLaptop(balance)});
+document.getElementById("buyButton").addEventListener("click", function(){buyLaptop()});
 document.getElementById("laptopOptions").addEventListener("click", function(){pickLaptop()});
 document.getElementById("WorkButton").addEventListener("click", function(){doWork()});
 document.getElementById("bankButton").addEventListener("click", function(){sendToBank()});
