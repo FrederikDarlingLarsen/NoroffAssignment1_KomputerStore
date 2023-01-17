@@ -20,8 +20,8 @@ const sendToBank = () => {
     updatePayBalance(globals.payBalance);
   } else {
     // Calculates the amount that should go to the loan and balance, and saves the values in variables.
-    let toLoan = globals.payBalance * 0.1;
-    let toAccount = globals.payBalance * 0.9;
+    const toLoan = globals.payBalance * 0.1;
+    const toAccount = globals.payBalance * 0.9;
 
     // The whether the amount going to the loan is larger than the loan.
     if (globals.toLoan > globals.loanNumber) {

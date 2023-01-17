@@ -57,13 +57,13 @@ const pickLaptop = () => {
 // Function for buying a laptop.
 const buyLaptop = () => {
   // Gets the price of the laptop as a string from the HTML, and parses it to a number.
-  let priceString = document
+  const priceString = document
     .getElementById("laptopPrice")
     .textContent.replace(".", "");
-  let price = parseFloat(priceString);
+  const price = parseFloat(priceString);
 
   // Gets the title of the laptop.
-  let laptopTitle = document.getElementById("laptopTitle").textContent;
+  const laptopTitle = document.getElementById("laptopTitle").textContent;
 
   console.log(laptopTitle);
 

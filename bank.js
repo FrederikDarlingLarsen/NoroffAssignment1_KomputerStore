@@ -4,10 +4,10 @@ import {updateBalance, updateLoan} from "./updateFunctions.js";
 // Function for getting af loan.
 const getLoan = () => {
   // Prompt asking to user how much they want to loan.
-  let loan = prompt("How much would you like to loan?", "enter amount");
+  const loan = prompt("How much would you like to loan?", "enter amount");
 
   // Converts the entered value to a number.
-  let loanAttempt = Number(loan);
+  const loanAttempt = Number(loan);
 
   // Checks if the user has a loan.
   if (!globals.hasLoan) {
