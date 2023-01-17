@@ -1,5 +1,5 @@
 import globals from "./globals.js";
-import {updateBalance, updateLoan, updatePayBalance} from "./UpdateFunctions.js";
+import {updateBalance, updateLoan, updatePayBalance} from "./updateFunctions.js";
 
 // Function for doing work adds 100 to the pay balance and the updates the HTML.
 const doWork = () => {

@@ -1,5 +1,5 @@
 import globals from "./globals.js";
-import {updateBalance, updateLoan} from "./UpdateFunctions.js";
+import {updateBalance, updateLoan} from "./updateFunctions.js";
 
 // Function for getting af loan.
 const getLoan = () => {

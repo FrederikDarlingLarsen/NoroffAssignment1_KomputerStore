@@ -1,5 +1,5 @@
 import globals from "./globals.js";
-import {updateBalance} from "./UpdateFunctions.js";
+import {updateBalance} from "./updateFunctions.js";
 
 // Function for picking a laptop.
 const pickLaptop = () => {
