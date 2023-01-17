@@ -1,6 +1,6 @@
-//Importing functions from bank.js, worker.js, laptop.js and 
-import {doWork, sendToBank, repayLoan} from "./worker.js";
-import {pickLaptop, buyLaptop} from "./laptop.js";
+//Importing functions from bank.js, worker.js, laptop.js and global variables from globals.js.
+import { doWork, sendToBank, repayLoan } from "./worker.js";
+import { pickLaptop, buyLaptop } from "./laptop.js";
 import getLoan from "./bank.js";
 import globals from "./globals.js";
 
@@ -29,9 +29,21 @@ fetch("https://hickory-quilled-actress.glitch.me/computers")
   );
 
 // Loading all of the elements that uses onClick events and adds event listeners.
-document.getElementById("loanButton").addEventListener("click", function(){getLoan()});
-document.getElementById("buyButton").addEventListener("click", function(){buyLaptop()});
-document.getElementById("laptopOptions").addEventListener("click", function(){pickLaptop()});
-document.getElementById("WorkButton").addEventListener("click", function(){doWork()});
-document.getElementById("bankButton").addEventListener("click", function(){sendToBank()});
-document.getElementById("paybackButton").addEventListener("click", function(){repayLoan()});
+document.getElementById("loanButton").addEventListener("click", function () {
+  getLoan();
+});
+document.getElementById("buyButton").addEventListener("click", function () {
+  buyLaptop();
+});
+document.getElementById("laptopOptions").addEventListener("click", function () {
+  pickLaptop();
+});
+document.getElementById("WorkButton").addEventListener("click", function () {
+  doWork();
+});
+document.getElementById("bankButton").addEventListener("click", function () {
+  sendToBank();
+});
+document.getElementById("paybackButton").addEventListener("click", function () {
+  repayLoan();
+});

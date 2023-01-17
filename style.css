@@ -21,7 +21,6 @@ p {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-
 h1 {
   background-color: black;
   color: white;
@@ -54,9 +53,9 @@ body {
 #outstandingLoan {
   display: none;
 }
- #paybackButton {
-  display: block flex; 
-}  
+#paybackButton {
+  display: block flex;
+}
 
 button {
   background-color: lightgreen;

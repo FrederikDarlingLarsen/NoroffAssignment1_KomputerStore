@@ -1,56 +1,57 @@
+// Importing the global variables and update functions.
 import globals from "./globals.js";
-import {updateBalance} from "./updateFunctions.js";
+import { updateBalance } from "./updateFunctions.js";
 
 // Function for picking a laptop.
 const pickLaptop = () => {
   // Gets the index for the laptop that is picked.
   let index = document.getElementById("laptopOptions").selectedIndex - 1; //thros erreoe?
 
-  if(index >=0){
-  // Using the Fetch API to get the data about the laptops.
-  fetch("https://hickory-quilled-actress.glitch.me/computers")
-    .then((response) => response.json())
-    .then((data) =>
-      (function () {
-        // Create a variable to hold the HTML for the features
-        let featuresList = "";
+  if (index >= 0) {
+    // Using the Fetch API to get the data about the laptops.
+    fetch("https://hickory-quilled-actress.glitch.me/computers")
+      .then((response) => response.json())
+      .then((data) =>
+        (function () {
+          // Create a variable to hold the HTML for the features
+          let featuresList = "";
 
-        // Using array.forEach to loop through the specs of a laptop and add them to the features list.
-        data[index].specs.forEach((element) => {
-          featuresList += `<li>${element}</li>`;
-        });
+          // Using array.forEach to loop through the specs of a laptop and add them to the features list.
+          data[index].specs.forEach((element) => {
+            featuresList += `<li>${element}</li>`;
+          });
 
-        // Get the element containing the features of the laptop and adds and unorderd list with the features.
-        document.getElementById(
-          "features"
-        ).innerHTML = `<ul>${featuresList}<ul/>`;
+          // Get the element containing the features of the laptop and adds and unorderd list with the features.
+          document.getElementById(
+            "features"
+          ).innerHTML = `<ul>${featuresList}<ul/>`;
 
-        // Gets the element with the description of the laptop and adds the description of the currently selected laptop.
-        document.getElementById(
-          "description"
-        ).textContent = `${data[index].description}`;
+          // Gets the element with the description of the laptop and adds the description of the currently selected laptop.
+          document.getElementById(
+            "description"
+          ).textContent = `${data[index].description}`;
 
-        // Gets the element containing the title of the laptop and sets it to the title of the currently selected laptop.
-        document.getElementById(
-          "laptopTitle"
-        ).textContent = `${data[index].title}`;
+          // Gets the element containing the title of the laptop and sets it to the title of the currently selected laptop.
+          document.getElementById(
+            "laptopTitle"
+          ).textContent = `${data[index].title}`;
 
-        // Gets the price of the current laptop and formats it into currency in DKK.
-        let formattedPrice = new Intl.NumberFormat("da-DK", {
-          style: "currency",
-          currency: "DKK",
-        }).format(data[index].price);
+          // Gets the price of the current laptop and formats it into currency in DKK.
+          let formattedPrice = new Intl.NumberFormat("da-DK", {
+            style: "currency",
+            currency: "DKK",
+          }).format(data[index].price);
 
-        // Gets the laptop price element and sets the text to the price of the current laptop.
-        document.getElementById("laptopPrice").textContent = formattedPrice;
+          // Gets the laptop price element and sets the text to the price of the current laptop.
+          document.getElementById("laptopPrice").textContent = formattedPrice;
 
-        // Gets the element for the image of the laptop and adds the image of the currently selected laptop.
-        document.getElementById(
-          "laptopImage"
-        ).innerHTML = `<img src="https://hickory-quilled-actress.glitch.me/${data[index].image}" 
+          // Gets the element for the image of the laptop and adds the image of the currently selected laptop.
+          document.getElementById(
+            "laptopImage"
+          ).innerHTML = `<img src="https://hickory-quilled-actress.glitch.me/${data[index].image}" 
       width="200" height="150" alt="${data[index].title}">`;
-      })()
-    );
+        })()
+      );
   }
 };
 
@@ -83,6 +84,5 @@ const buyLaptop = () => {
   }
 };
 
-
-export {pickLaptop, buyLaptop};
-
+// Exporting laptop functions.
+export { pickLaptop, buyLaptop };

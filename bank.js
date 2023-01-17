@@ -1,5 +1,6 @@
+// Importing the global variables and update functions.
 import globals from "./globals.js";
-import {updateBalance, updateLoan} from "./updateFunctions.js";
+import { updateBalance, updateLoan } from "./updateFunctions.js";
 
 // Function for getting af loan.
 const getLoan = () => {
@@ -24,8 +25,7 @@ const getLoan = () => {
 
       // Set the text and button for the loan to be displayed.
       globals.outLoanText.style.display = "block";
-      globals.paybackBtn.setAttribute(
-        "style", "display: block flex;");
+      globals.paybackBtn.setAttribute("style", "display: block flex;");
 
       // Updating the loan and balance HTML.
       updateLoan();
@@ -42,7 +42,5 @@ const getLoan = () => {
   }
 };
 
-
+//Exporting getLoan.
 export default getLoan;
-
-

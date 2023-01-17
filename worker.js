@@ -1,5 +1,10 @@
+// Importing the global variables and update functions.
 import globals from "./globals.js";
-import {updateBalance, updateLoan, updatePayBalance} from "./updateFunctions.js";
+import {
+  updateBalance,
+  updateLoan,
+  updatePayBalance,
+} from "./updateFunctions.js";
 
 // Function for doing work adds 100 to the pay balance and the updates the HTML.
 const doWork = () => {
@@ -63,16 +68,15 @@ const repayLoan = () => {
     // If the loan is less than the pay balance the reaminder is calculated and added to the balance.
     if (globals.loanNumber < globals.payBalance) {
       let theRest = globals.payBalance - globals.loanNumber;
-      globals.balance += (globals.payBalance - globals.loanNumber);
+      globals.balance += globals.payBalance - globals.loanNumber;
     }
 
-    console.log("loan is:" + globals.loan)
+    console.log("loan is:" + globals.loan);
     // The elements pertaining to the loan are hidden.
     globals.outLoanText.style.display = "none";
     globals.paybackBtn.style.display = "none";
     globals.loanNumber = 0;
 
-    
     // Balance is updated.
     updateBalance();
   } else {
@@ -86,5 +90,5 @@ const repayLoan = () => {
   updatePayBalance();
 };
 
-export {doWork, sendToBank, repayLoan};
-
+// Exporting worker functions
+export { doWork, sendToBank, repayLoan };

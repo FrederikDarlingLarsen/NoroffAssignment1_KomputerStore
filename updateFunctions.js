@@ -1,3 +1,4 @@
+// Importing global variables.
 import globals from "./globals.js";
 
 // Function for updating the HTML of balance in the bank.
@@ -29,4 +30,5 @@ const updatePayBalance = () => {
   document.getElementById("payBalance").textContent = formattedPayBalance;
 };
 
-export {updateBalance, updatePayBalance, updateLoan}
+// Exporting update functions.
+export { updateBalance, updatePayBalance, updateLoan };
