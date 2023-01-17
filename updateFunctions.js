@@ -1,4 +1,4 @@
-
+import globals from "./globals.js";
 
 // Function for updating the HTML of balance in the bank.
 const updateBalance = () => {

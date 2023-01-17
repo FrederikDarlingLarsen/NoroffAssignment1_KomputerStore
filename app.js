@@ -1,21 +1,4 @@
 
-    // The balace in the bank.
-    let balance = 0
-
-    // The amount of money loaned.
-    let loanNumber = 0
-    
-    // Declaring a variable for the pay balance
-    let payBalance = 0
-    
-    // boolean for whether the user has a loan.
-    let hasLoan = false
-    
-    // Gets the text for the loan, so it can be enabled and disabled.
-    let outLoanText = document.getElementById("outstandingLoan")
-    
-    // Gets the "repay loan" button for the HTML.
-    let paybackBtn = document.getElementById("paybackButton")
 
 fetch("https://hickory-quilled-actress.glitch.me/computers")
   .then((response) => response.json())

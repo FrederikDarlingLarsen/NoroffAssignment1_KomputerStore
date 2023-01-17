@@ -1,3 +1,4 @@
+import globals from "./globals.js";
 
 // Function for picking a laptop.
 const pickLaptop = () => {

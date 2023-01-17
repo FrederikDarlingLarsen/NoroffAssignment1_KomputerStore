@@ -1,3 +1,5 @@
+import globals from "./globals.js";
+
 // Function for doing work adds 100 to the pay balance and the updates the HTML.
 const doWork = () => {
   payBalance += 100;

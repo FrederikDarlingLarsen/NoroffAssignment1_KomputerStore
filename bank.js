@@ -1,3 +1,5 @@
+import globals from "./globals.js";
+
 // Function for getting af loan.
 const getLoan = () => {
   // Prompt asking to user how much they want to loan.
@@ -7,7 +9,7 @@ const getLoan = () => {
   let loanAttempt = Number(loan);
 
   // Checks if the user has a loan.
-  if (!hasLoan) {
+  if (!globals.hasLoan) {
     // Checks whether the entered amount is less than or equal to double the balance, and if it is above 0.
     if (loanAttempt <= balance * 2 && loanAttempt > 0) {
       // sets the attempted loan to the actual loan
@@ -15,9 +17,9 @@ const getLoan = () => {
       // Gets the element with the loan amount and sets it to the amount loaned.
       document.getElementById("outLoan").textContent = loanNumber;
 
-      // Adds theloaned amount to the balance and set hasLoan to true.
-      balance += loanAttempt;
-      hasLoan = true;
+      // Adds theloaned amount to the balance and set globals.hasLoan to true.
+      globals.balance += loanAttempt;
+      globals.hasLoan = true;
 
       // Set the text and button for the loan to be displayed.
       outLoanText.style.display = "block";
