@@ -5,6 +5,7 @@
   padding: 10px;
   justify-content: center;
 }
+
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
@@ -20,14 +21,6 @@ p {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.grid-item-large {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20%;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 10%;
-}
 
 h1 {
   background-color: black;
@@ -61,11 +54,8 @@ body {
 #outstandingLoan {
   display: none;
 }
-
  #paybackButton {
-  display: none; 
-
-
+  display: block flex; 
 }  
 
 button {
@@ -77,11 +67,11 @@ button {
 }
 
 button:hover {
-  background-color: green;
+  background-color: #00bb00;
 }
 
 button:active {
-  background-color: gray;
+  background-color: green;
   box-shadow: 0 3px #666;
   transform: translateY(2px);
 }

@@ -1,7 +1,13 @@
+//Importing functions from bank.js, worker.js, laptop.js and 
 import {doWork, sendToBank, repayLoan} from "./worker.js";
 import {pickLaptop, buyLaptop} from "./laptop.js";
 import getLoan from "./bank.js";
+import globals from "./globals.js";
 
+// Disable the "repay loan" button.
+globals.paybackBtn.style.display = "none";
+
+// Using the Fetch API to get data about the laptops.
 fetch("https://hickory-quilled-actress.glitch.me/computers")
   .then((response) => response.json())
   .then((data) =>

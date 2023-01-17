@@ -63,19 +63,21 @@ const repayLoan = () => {
     // If the loan is less than the pay balance the reaminder is calculated and added to the balance.
     if (globals.loanNumber < globals.payBalance) {
       let theRest = globals.payBalance - globals.loanNumber;
-      globals.balance += theRest;
+      globals.balance += (globals.payBalance - globals.loanNumber);
     }
 
+    console.log("loan is:" + globals.loan)
     // The elements pertaining to the loan are hidden.
     globals.outLoanText.style.display = "none";
     globals.paybackBtn.style.display = "none";
     globals.loanNumber = 0;
 
+    
     // Balance is updated.
     updateBalance();
   } else {
     // If (loanNumber <= payBalance) = false, pay balance is subtracted from the loan.
-    globals.loanNumber -= payBalance;
+    globals.loanNumber -= globals.payBalance;
   }
 
   // Updates the loan HTML, sets the pay balance to 0 and updates the pay balance HTML.

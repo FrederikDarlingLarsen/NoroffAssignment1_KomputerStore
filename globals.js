@@ -18,4 +18,5 @@ const globals = {
     // Gets the "repay loan" button for the HTML.
     paybackBtn : document.getElementById("paybackButton")
   };
+
   export default globals;
