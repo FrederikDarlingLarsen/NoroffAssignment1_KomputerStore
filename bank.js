@@ -20,8 +20,7 @@ const getLoan = () => {
       hasLoan = true;
 
       // Set the text and button for the loan to be displayed.
-      outLoanText.setAttribute(
-        "style", "display: block flex;");
+      outLoanText.style.display = "block";
       paybackBtn.setAttribute(
         "style", "display: block flex;");
 

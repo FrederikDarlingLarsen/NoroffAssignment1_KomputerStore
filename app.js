@@ -37,9 +37,6 @@ fetch("https://hickory-quilled-actress.glitch.me/computers")
     })()
   );
 
-
-
-
 // Loading all of the elements that uses onClick events and adds event listeners.
 document.getElementById("loanButton").addEventListener("click", function(){getLoan()});
 document.getElementById("buyButton").addEventListener("click", function(){buyLaptop(balance)});
