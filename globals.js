@@ -10,7 +10,7 @@ const globals = {
   // Declaring a variable for the pay balance
   payBalance: 0,
 
-  // boolean for whether the user has a loan.
+  // Boolean for whether the user has a loan.
   hasLoan: false,
 
   // Gets the text for the loan, so it can be enabled and disabled.

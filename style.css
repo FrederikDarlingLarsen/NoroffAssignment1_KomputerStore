@@ -1,3 +1,4 @@
+/* The grid-container containg the styling of the grid, grid-tiem contains the styling of the items.  */
 .grid-container {
   display: flex;
   flex-direction: row;
@@ -16,11 +17,33 @@
   width: 20%;
 }
 
+/* Setting the font for the text. */
 p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+/* Styling the list for the laptop features. */
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* Setting the margin. */
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Dispaly of button. */
+#outstandingLoan {
+  display: none;
+}
+#paybackButton {
+  display: block flex;
+}
+
+/* Styling for the headings. */
 h1 {
   background-color: black;
   color: white;
@@ -35,28 +58,14 @@ h3 {
   font-family: sans-serif;
 }
 
-ul {
-  list-style-position: inside;
-  padding-left: 0;
-}
-
 h4 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-body {
-  margin-left: 10%;
-  margin-right: 10%;
-}
 
-#outstandingLoan {
-  display: none;
-}
-#paybackButton {
-  display: block flex;
-}
-
+/* Button classes for styling the buttons, including the change of color when when hovering
+   and slighly transforming when pressing the button. */
 button {
   background-color: lightgreen;
   border-radius: 8px;

@@ -10,14 +10,13 @@
   <body>
     <h1>Komputer Store</h1>
 
+     <!-- This grid container contains the bank and the work elements of the application -->
     <div class="grid-container">
       <div class="grid-item">
         <h2>Joe Banker</h2>
         <p>Balance:</p>
         <p id="currentBalance">0,00 kr.</p>
-
         <button id="loanButton">Get loan</button>
-
         <div id="outstandingLoan">
           <p>Outstanding loan:</p>
           <p id="outLoan">0,00 kr.</p>
@@ -33,25 +32,24 @@
       </div>
     </div>
 
+    <!-- This grid container contains the laptop element -->
     <div class="grid-container">
       <div class="grid-item">
         <h2>Laptops</h2>
-
         <select id="laptopOptions" name="cars"></select>
-
         <h4>Features:</h4>
         <p id="features"></p>
       </div>
       <div class="grid-item">
         <h3 id="laptopTitle"></h3>
-
         <div id="laptopImage"></div>
-
         <p id="description"></p>
         <p id="laptopPrice">0,00 kr.</p>
         <button id="buyButton">Buy now</button>
       </div>
     </div>
+    
+    <!-- Script is imprted as type "module" -->
     <script type="module" src="app.js"></script>
   </body>
 </html>
