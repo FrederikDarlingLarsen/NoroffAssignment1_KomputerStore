@@ -1,11 +1,14 @@
 # NoroffAssignment1_KomputerStore
 
-The application is hosted at: https://frederikdarlinglarsen.github.io/NoroffAssignment1_KomputerStore/
+The purpose of this assignment was to practice the fundamentals of JavaScript for frontend development. The focus here was more on the functionality and the logic of the system more so than the styling.
 
+**The application is hosted at:** https://frederikdarlinglarsen.github.io/NoroffAssignment1_KomputerStore/
 
-The purpose of this assignment was to...
-For my solution i decided to....
+## My solution
 
+For my solution a decided to go with my own simple design with css. In the first round of implementation i did not take into account the use of modules which caused some issues with acessing global variables, when modules were attempted. This was fixed by storing all global variables in an object that was then exported and imported into the other modules using the variables.
+
+## Description
 
 The application is seperated into 3 parts. The bank, work and laptops.
 
